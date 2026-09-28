@@ -1,19 +1,4 @@
-export type FooterLink = {
-  label: string;
-  href: string;
-};
-
-export type FooterColumn = {
-  title: string;
-  links: FooterLink[];
-};
-
-type FooterProps = {
-  columns?: FooterColumn[];
-  className?: string;
-};
-
-const defaultColumns: FooterColumn[] = [
+const defaultColumns = [
   {
     title: "Explorar",
     links: [
@@ -47,10 +32,7 @@ const defaultColumns: FooterColumn[] = [
 const linkClass =
   "rounded-sm text-white/90 transition-colors hover:text-[#F2C078] focus-visible:text-[#F2C078] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#F2C078]";
 
-export default function Footer({
-  columns = defaultColumns,
-  className = "",
-}: FooterProps) {
+export default function Footer({ columns = defaultColumns, className = "" }) {
   const year = new Date().getFullYear();
 
   return (
@@ -58,7 +40,7 @@ export default function Footer({
       <div className="bg-[#A85F3D]">
         <div className="mx-auto max-w-7xl px-6 py-16 sm:py-20">
           <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1.4fr_repeat(3,1fr)]">
-            
+            {/* Marca */}
             <div className="flex max-w-sm flex-col gap-5 md:col-span-2 lg:col-span-1">
               <a
                 href="/"
@@ -78,7 +60,7 @@ export default function Footer({
               </a>
             </div>
 
-            
+            {/* Columnas de links */}
             {columns.map((column) => (
               <nav key={column.title} aria-label={column.title}>
                 <h3 className="mb-4 font-serif text-xl font-bold text-white">
@@ -99,7 +81,8 @@ export default function Footer({
         </div>
       </div>
 
-            <div className="bg-[#44352D]">
+      {/* Barra inferior */}
+      <div className="bg-[#44352D]">
         <div className="mx-auto flex max-w-7xl flex-col gap-3 px-6 py-5 text-sm text-white/85 sm:flex-row sm:items-center sm:justify-between">
           <p>© {year} Huellas Seguras. Proyecto final, UTN FRT.</p>
           <ul className="flex gap-6">
