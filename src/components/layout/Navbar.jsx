@@ -74,7 +74,7 @@ export default function Navbar() {
 
         <button
           type="button"
-          className="hidden rounded-full bg-[#D9825B] px-5 py-2 text-sm font-semibold text-white transition-colors hover:bg-[#A85F3D] md:inline-block"
+          className="hidden rounded-full bg-[#D9825B] px-5 py-2 text-sm font-semibold text-white transition-colors hover:bg-amber-700 md:inline-block"
         >
           Reportar un caso
         </button>
