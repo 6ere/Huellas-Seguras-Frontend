@@ -1,7 +1,4 @@
-import Footer from "./components/layout/Footer"
-import Navbar from "./components/layout/Navbar"
-import Hero from "./components/sections/Hero"
-import Cards from "./components/sections/Cards"
+import { AppRouter } from "./routes/AppRouter"
 
 
 function App() {
@@ -9,12 +6,7 @@ function App() {
 
   return (
     <>
-      <Navbar/>
-      <main>
-      <Hero/>
-      <Cards/>
-      </main>
-      <Footer/>
+      <AppRouter/>
     </>
   )
 }

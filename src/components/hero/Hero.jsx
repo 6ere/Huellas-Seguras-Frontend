@@ -7,7 +7,7 @@ export default function Hero() {
       >
         <video
           className="absolute inset-0 h-full w-full object-cover"
-          src="../../../public/PerroInicio.mp4"
+          src="/PerroInicio.mp4"
           poster="/images/hero-perros-poster.jpg"
           autoPlay
           loop
