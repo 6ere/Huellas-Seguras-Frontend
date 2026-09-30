@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const NAV_ITEMS = ["Inicio", "Cómo funciona", "Casos", "Sumate", "Contacto"];
 
@@ -8,8 +9,8 @@ export default function Navbar() {
   return (
     <nav className="absolute inset-x-0 top-0 z-20 bg-[#A85F3D]/90">
       <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-4 gap-y-3 px-4 py-6 md:flex-nowrap md:px-6">
-        <a
-          href="#inicio"
+        <Link
+          to="/"
           className="flex items-center gap-2 font-serif text-lg font-bold text-white"
         >
           <svg
@@ -26,7 +27,7 @@ export default function Navbar() {
             <ellipse cx="40" cy="16" rx="4.2" ry="5.4" />
           </svg>
           Huellas Seguras
-        </a>
+        </Link>
 
         <button
           type="button"
