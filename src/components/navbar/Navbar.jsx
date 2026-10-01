@@ -1,7 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const NAV_ITEMS = ["Inicio", "Cómo funciona", "Casos", "Sumate", "Contacto"];
+const NAV_ITEMS = [
+   { label: "Inicio", to: "/" },
+  { label: "Como funciona", to: "/#comoFunciona" },
+  { label: "Casos", to: "/#adopciones" },
+  { label: "Sumate", to: "/veterinarias" },
+  { label: "Contacto", to: "/nosotros" },];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -60,15 +65,15 @@ export default function Navbar() {
             isOpen ? "flex" : "hidden"
           } w-full flex-col gap-3 rounded-xl bg-[#8F4E31] p-4 backdrop-blur-sm md:flex md:w-auto md:flex-row md:items-center md:gap-8 md:bg-transparent md:p-0 md:backdrop-blur-none`}
         >
-          {NAV_ITEMS.map((label) => (
-            <li key={label}>
-              <button
-                type="button"
+          {NAV_ITEMS.map((item) => (
+            <li key={item.label}>
+              <Link
+              to={item.to}
                 onClick={() => setIsOpen(false)}
                 className="border-b-2 border-transparent py-2 text-sm text-white/80 transition-colors hover:border-[#F2C078] hover:text-white md:py-0"
               >
-                {label}
-              </button>
+                {item.label}
+              </Link>
             </li>
           ))}
         </ul>

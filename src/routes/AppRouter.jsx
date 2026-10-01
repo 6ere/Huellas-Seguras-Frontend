@@ -10,6 +10,8 @@ export function AppRouter(){
         <Routes>
         <Route element={<MainLayout/>}>
         <Route path="/" element={<Home/>}/>
+        <Route path="/veterinarias" element={<Veterinaria/>}/>
+        
         </Route>
         <Route path="*" element={<NotFound/>}/>
         </Routes>
