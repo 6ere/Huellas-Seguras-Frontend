@@ -1,12 +1,11 @@
 export default function Hero() {
   return (
     <>
-      <section
-        id="inicio"
+      <section 
         className="fixed inset-0 z-0 flex items-center justify-center overflow-hidden"
       >
         <video
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute inset-0 h-full w-full object-cover" 
           src="/PerroInicio.mp4"
           poster="/images/hero-perros-poster.jpg"
           autoPlay
@@ -14,7 +13,7 @@ export default function Hero() {
           muted
           playsInline
         />
-        <div className="absolute inset-0 bg-[#A85F3D]/60" />
+        <div  className="absolute inset-0 bg-[#A85F3D]/60" />
 
         <div className="relative z-10 mx-auto max-w-3xl px-4 py-32 text-center">
           <h1 className="font-serif text-4xl font-bold text-white md:text-6xl">
