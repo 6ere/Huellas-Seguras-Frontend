@@ -3,7 +3,7 @@ import MainLayout from "../layouts/MainLayout/MainLayout";
 import Home from "../pages/Home/Home";
 import Veterinaria from "../pages/Veterinaria/Veterinaria";
 import NotFound from "../pages/Errors/404-NotFound/NotFound";
-
+import Refugio from "../pages/Refugio/Refugio";
 export function AppRouter(){
     return(
         <BrowserRouter>
@@ -11,6 +11,7 @@ export function AppRouter(){
         <Route element={<MainLayout/>}>
         <Route path="/" element={<Home/>}/>
         <Route path="/veterinarias" element={<Veterinaria/>}/>
+        <Route path="/refugios" element={<Refugio/>}/>
         
         </Route>
         <Route path="*" element={<NotFound/>}/>

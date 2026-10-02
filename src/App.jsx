@@ -1,3 +1,4 @@
+import FiltrosAside from "./components/asidebar/asidebar"
 import { AppRouter } from "./routes/AppRouter"
 
 
