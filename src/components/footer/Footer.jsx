@@ -12,8 +12,8 @@ const defaultColumns = [
     title: "Huellas Seguras",
     links: [
       { label: "Quiénes somos", href: "/nosotros" },
-      { label: "Refugios y veterinarias", href: "/aliados" },
-      { label: "Preguntas frecuentes", href: "/faq" },
+      { label: "Veterinarias", href: "/veterinarias" },
+      { label: "Refugios", href: "/refugios" },
     ],
   },
   {

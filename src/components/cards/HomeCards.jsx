@@ -1,4 +1,4 @@
-// Contenido de ejemplo para Huellas Seguras. Reemplazá por tus fotos y textos reales.
+// Contenido de Huellas Seguras.
 const defaultItems = [
   {
     title: "Reportá en segundos",
@@ -12,33 +12,28 @@ const defaultItems = [
     title: "Seguimiento real",
     description:
       "Cada caso queda registrado y podés ver su estado: en atención, en tratamiento o ya en un hogar.",
-    image:
-      "/GataSol.jpeg",
+    image: "/GataSol.jpeg",
     imageAlt: "Veterinaria revisando a un perro rescatado",
   },
   {
     title: "Encontrá a tu perro",
     description:
       "Si se perdió, publicá su ficha y avisamos a la comunidad de tu zona para ayudarte a encontrarlo.",
-    image: "/AnimalGere.jpeg", 
+    image: "/AnimalGere.jpeg",
     imageAlt: "Perro perdido con un cartel de búsqueda",
   },
   {
     title: "Dale un hogar",
     description:
       "Conocé a los perros rescatados que buscan familia y contactá directo con el refugio que los cuida.",
-    image: "/PerraDani.jpeg", 
+    image: "/PerraDani.jpeg",
     imageAlt: "Familia adoptando a un perro rescatado",
   },
-  
 ];
 
-function Card({ item }) {
+function HomeCard({ item }) {
   return (
-    <article
-      className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-[#A85F3D]/10 bg-white/70 shadow-lg shadow-[#A85F3D]/10 transition duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-[#A85F3D]/25 motion-reduce:transition-none motion-reduce:hover:translate-y-0"
-    >
-      {/* Imagen con velo terracota que se aclara al hacer hover */}
+    <article className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-[#A85F3D]/10 bg-white/70 shadow-lg shadow-[#A85F3D]/10 transition duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-[#A85F3D]/25 motion-reduce:transition-none motion-reduce:hover:translate-y-0">
       <div className="relative aspect-4/3 w-full overflow-hidden">
         {item.image ? (
           <img
@@ -54,7 +49,10 @@ function Card({ item }) {
             className="h-full w-full bg-linear-to-br from-[#F2C078] to-[#D9825B]"
           />
         )}
-        <div className="absolute inset-0 transition-colors duration-300 group-hover:bg-[#A85F3D]/0 motion-reduce:transition-none" />
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 bg-[#A85F3D]/15 transition-colors duration-300 group-hover:bg-[#A85F3D]/0 motion-reduce:transition-none"
+        />
       </div>
 
       <div className="flex flex-1 flex-col gap-3 p-6 pb-7">
@@ -66,20 +64,21 @@ function Card({ item }) {
 
       <span
         aria-hidden="true"
-        className="absolute bottom-0 left-0 h-1.5 w-0  transition-all duration-500 group-hover:w-full motion-reduce:transition-none"
+        className="absolute bottom-0 left-0 h-1.5 w-0 bg-[#A85F3D] transition-all duration-500 group-hover:w-full motion-reduce:transition-none"
       />
     </article>
   );
 }
 
-export default function Cards({ items = defaultItems, className = "" }) {
+export default function HomeCards({ items = defaultItems, className = "" }) {
   return (
     <section
-      className={`rounded-t-4xl relative z-10 w-full bg-[#FBF3EA] py-20 sm:py-28 ${className}`}
+      id="comoFunciona"
+      className={`relative z-10 w-full scroll-mt-0 rounded-t-4xl bg-[#FBF3EA] py-20 sm:py-28 ${className}`}
     >
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 px-6 sm:grid-cols-2 lg:grid-cols-4">
-        {items.slice(0, 4).map((item, index) => (
-          <Card key={index} item={item} />
+        {items.slice(0, 4).map((item) => (
+          <HomeCard key={item.title} item={item} />
         ))}
       </div>
     </section>
