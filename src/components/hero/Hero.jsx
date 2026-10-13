@@ -1,3 +1,4 @@
+
 export default function Hero() {
   return (
     <>
@@ -26,14 +27,14 @@ export default function Hero() {
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             {/* El formulario */}
-            <button
-              type="button"
+            <a
+              href="/login"
               className="rounded-full bg-[#D9825B] px-7 py-3 text-lg font-semibold text-white transition-colors hover:bg-[#A85F3D]"
             >
               Reportar un caso
-            </button>
+            </a>
             <a
-              href="#casos"
+              href="/login"
               className="rounded-full bg-[#F2C078] px-7 py-3 text-lg font-medium text-[#44352D] transition-colors hover:bg-[#DFA95F]"
             >
               Ver perros en adopción

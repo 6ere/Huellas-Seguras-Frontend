@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Huella({ className = "", style }) {
   return (
@@ -13,6 +14,7 @@ function Huella({ className = "", style }) {
 }
 
 export default function Login() {
+  const navigate = useNavigate();
   const [registro, setRegistro] = useState(false); // false = login, true = registro
   const [nombre, setNombre] = useState("");
   const [email, setEmail] = useState("");
@@ -27,6 +29,8 @@ export default function Login() {
     e.preventDefault();
     // Acá va la conexión con el backend
     console.log(registro ? { nombre, email, password } : { email, password });
+
+    navigate("/login/user");
   };
 
   return (

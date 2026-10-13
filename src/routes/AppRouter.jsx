@@ -5,6 +5,8 @@ import Veterinaria from "../pages/Veterinaria/Veterinaria";
 import NotFound from "../pages/Errors/404-NotFound/NotFound";
 import Login from "../pages/Login/Login.jsx";
 import Nosotros from "../pages/Nosotros/Nosotros";
+import UserPage from "../pages/UserPage/UserPage"
+import Sidebar from "../components/navbar/Sidebar.jsx";
  
 export function AppRouter() {
     return (
@@ -17,6 +19,12 @@ export function AppRouter() {
                 </Route>
  
                 <Route path="/login" element={<Login />} />
+                <Route path="/login/user" element={<UserPage/>}>
+                    <Route path="/login/user/" element={<Sidebar/>}/>
+                </Route>
+                
+                
+                
  
                 <Route path="*" element={<NotFound />} />
             </Routes>

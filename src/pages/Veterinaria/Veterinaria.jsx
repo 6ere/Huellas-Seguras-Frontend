@@ -5,7 +5,7 @@ export default function Veterinaria() {
     <main className="min-h-screen bg-[#FBF3EA] px-6 pb-20 pt-32">
       <div className="mx-auto max-w-7xl">
         <h1 className="font-serif text-3xl font-bold text-[#44352D] md:text-4xl">
-          Veterinarias aliadas
+          Veterinarias Asociadas
         </h1>
         <p className="mt-3 max-w-2xl text-[#6b5c4f]">
           Veterinarias que se suman a Huellas Seguras para atender y dar
