@@ -27,7 +27,6 @@ export default function Login() {
 
   const enviar = (e) => {
     e.preventDefault();
-    // Acá va la conexión con el backend
     console.log(registro ? { nombre, email, password } : { email, password });
 
     navigate("/login/user");
@@ -36,13 +35,11 @@ export default function Login() {
   return (
     <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#FBF3EA] px-4 pb-16 pt-32">
 
-      {/* Huellas gigantes de fondo */}
       <Huella className="pointer-events-none absolute -bottom-20 -left-20 h-96 w-96 -rotate-12 text-[#e6d9cd]" />
       <Huella className="pointer-events-none absolute -right-16 -top-10 h-72 w-72 rotate-12 text-[#e6d9cd]" />
 
       <div className="relative flex w-full max-w-4xl flex-col overflow-hidden rounded-3xl bg-white shadow-xl md:flex-row">
 
-        {/* Formulario */}
         <form onSubmit={enviar} className="p-10 md:w-1/2 md:p-14">
           <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#44352D] text-[#FBF3EA]">
             <Huella className="h-7 w-7" />
@@ -108,7 +105,6 @@ export default function Login() {
           </button>
         </form>
 
-        {/* Panel oscuro con corte diagonal */}
         <aside className="flex flex-1 flex-col items-center justify-center bg-[#44352D] px-10 py-14 text-center md:-ml-16 md:pl-24 md:[clip-path:polygon(15%_0,100%_0,100%_100%,0_100%)]">
           <div className="flex gap-4 text-[#e6d9cd]">
             {[0, 1, 2, 3].map((n) => (
