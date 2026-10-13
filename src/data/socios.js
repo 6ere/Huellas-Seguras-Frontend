@@ -11,7 +11,7 @@ export const veterinarias = [
     abierto: true,
   },
    {
-    id: 1,
+    id: 2,
     nombre: "Veterinaria Huellitas",
     ubicacion: "San Miguel de Tucumán",
     descripcion:
@@ -21,7 +21,7 @@ export const veterinarias = [
     abierto: true,
   },
    {
-    id: 1,
+    id: 3,
     nombre: "Veterinaria Huellitas",
     ubicacion: "San Miguel de Tucumán",
     descripcion:
@@ -31,7 +31,7 @@ export const veterinarias = [
     abierto: false,
   },
    {
-    id: 1,
+    id: 4,
     nombre: "Veterinaria Huellitas",
     ubicacion: "San Miguel de Tucumán",
     descripcion:
@@ -41,7 +41,7 @@ export const veterinarias = [
     abierto: false,
   },
    {
-    id: 1,
+    id: 5,
     nombre: "Veterinaria Huellitas",
     ubicacion: "San Miguel de Tucumán",
     descripcion:
@@ -51,7 +51,7 @@ export const veterinarias = [
     abierto: true,
   },
    {
-    id: 1,
+    id: 6,
     nombre: "Veterinaria Huellitas",
     ubicacion: "San Miguel de Tucumán",
     descripcion:

@@ -2,10 +2,10 @@ const defaultColumns = [
   {
     title: "Explorar",
     links: [
-      { label: "Reportar un caso", href: "/reportar" },
-      { label: "Casos activos", href: "/casos" },
-      { label: "Perros en adopción", href: "/adopciones" },
-      { label: "Perros perdidos", href: "/perdidos" },
+      { label: "Reportar un caso", href: "/login" },
+      { label: "Casos activos", href: "/login" },
+      { label: "Animales en adopción", href: "/login" },
+      { label: "Animales perdidos", href: "/login" },
     ],
   },
   {
@@ -53,7 +53,7 @@ export default function Footer({ columns = defaultColumns, className = "" }) {
                 refugios y veterinarias de tu zona.
               </p>
               <a
-                href="/reportar"
+                href="/login"
                 className="mt-1 w-fit rounded-full bg-[#F2C078] px-6 py-2.5 text-base font-medium text-[#44352D] transition-colors hover:bg-[#DFA95F] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
               >
                 Reportar un caso
