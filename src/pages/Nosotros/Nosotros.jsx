@@ -122,8 +122,8 @@ export default function Nosotros() {
               </div>
 
               <div className="group relative w-full md:w-1/2">
-                <div className="absolute inset-0 -rotate-6 scale-105 rounded-[2rem] bg-linear-to-br from-[#8F4E31] to-[#D9825B] shadow-lg transition-transform duration-700 ease-out group-hover:-rotate-3 group-hover:scale-100 md:rounded-[3rem]" />
-                <div className="relative overflow-hidden rounded-[2rem] border-8 border-white/80 bg-white shadow-2xl backdrop-blur-sm md:rounded-[3rem]">
+                <div className="absolute inset-0 -rotate-6 scale-105 rounded-4xl bg-linear-to-br from-[#8F4E31] to-[#D9825B] shadow-lg transition-transform duration-700 ease-out group-hover:-rotate-3 group-hover:scale-100 md:rounded-[3rem]" />
+                <div className="relative overflow-hidden rounded-4xl border-8 border-white/80 bg-white shadow-2xl backdrop-blur-sm md:rounded-[3rem]">
                   <img
                     src="/Nosotros.jpeg"
                     alt="Equipo de Huellas Seguras"
@@ -147,8 +147,8 @@ export default function Nosotros() {
           <div className={caja}>
             <div className="flex flex-col-reverse items-center gap-10 md:flex-row md:gap-12">
               <div className="group relative w-full md:w-5/12">
-                <div className="absolute inset-0 rotate-6 scale-105 rounded-[2rem] bg-linear-to-br from-[#8F4E31] to-[#D9825B] shadow-lg transition-transform duration-700 ease-out group-hover:rotate-3 group-hover:scale-100 md:rounded-[3rem]" />
-                <div className="relative flex h-52 flex-col items-center justify-center rounded-[2rem] border-8 border-white/80 bg-[#FBF3EA] p-6 text-center shadow-2xl md:h-72 md:rounded-[3rem]">
+                <div className="absolute inset-0 rotate-6 scale-105 rounded-4xl bg-linear-to-br from-[#8F4E31] to-[#D9825B] shadow-lg transition-transform duration-700 ease-out group-hover:rotate-3 group-hover:scale-100 md:rounded-[3rem]" />
+                <div className="relative flex h-52 flex-col items-center justify-center rounded-4xl border-8 border-white/80 bg-[#FBF3EA] p-6 text-center shadow-2xl md:h-72 md:rounded-[3rem]">
                   <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#F2C078] text-[#44352D] transition-transform duration-500 group-hover:rotate-12">
                     <Huella className="h-8 w-8" />
                   </div>
@@ -241,3 +241,4 @@ export default function Nosotros() {
     </main>
   );
 }
+

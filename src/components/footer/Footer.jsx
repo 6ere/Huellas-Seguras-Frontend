@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const defaultColumns = [
   {
     title: "Explorar",
@@ -42,22 +44,22 @@ export default function Footer({ columns = defaultColumns, className = "" }) {
           <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1.4fr_repeat(3,1fr)]">
             {/* Marca */}
             <div className="flex max-w-sm flex-col gap-5 md:col-span-2 lg:col-span-1">
-              <a
-                href="/"
+              <Link
+                to="/"
                 className="w-fit rounded-sm font-serif text-3xl font-bold text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#F2C078]"
               >
                 Huellas Seguras
-              </a>
+              </Link>
               <p className="leading-relaxed text-white/90">
                 Cada reporte acerca a un perro a su hogar. Conectamos a vecinos,
                 refugios y veterinarias de tu zona.
               </p>
-              <a
-                href="/login"
+              <Link
+                to="/login"
                 className="mt-1 w-fit rounded-full bg-[#F2C078] px-6 py-2.5 text-base font-medium text-[#44352D] transition-colors hover:bg-[#DFA95F] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
               >
                 Reportar un caso
-              </a>
+              </Link>
             </div>
 
             {/* Columnas de links */}
@@ -69,9 +71,15 @@ export default function Footer({ columns = defaultColumns, className = "" }) {
                 <ul className="flex flex-col gap-3">
                   {column.links.map((link) => (
                     <li key={link.label}>
-                      <a href={link.href} className={linkClass}>
-                        {link.label}
-                      </a>
+                      {link.href.startsWith("/") ? (
+                        <Link to={link.href} className={linkClass}>
+                          {link.label}
+                        </Link>
+                      ) : (
+                        <a href={link.href} className={linkClass}>
+                          {link.label}
+                        </a>
+                      )}
                     </li>
                   ))}
                 </ul>
@@ -87,14 +95,14 @@ export default function Footer({ columns = defaultColumns, className = "" }) {
           <p>© {year} Huellas Seguras. Proyecto final, UTN FRT.</p>
           <ul className="flex gap-6">
             <li>
-              <a href="/privacidad" className={linkClass}>
+              <Link to="/privacidad" className={linkClass}>
                 Privacidad
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/terminos" className={linkClass}>
+              <Link to="/terminos" className={linkClass}>
                 Términos
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

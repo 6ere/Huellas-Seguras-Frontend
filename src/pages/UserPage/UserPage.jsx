@@ -1,4 +1,7 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState,useEffect } from "react";
+import Swal from "sweetalert2";
+import {obtenerFotosPerros} from "../../services/dogService"
+
 import Sidebar from "../../components/navbar/Sidebar"
 import FilterPanel from "../../components/navbar/FilterPanel"
 import TopBar from "../../components/navbar/TopBar"
@@ -29,6 +32,26 @@ export default function AnimalesPage() {
   const [vista, setVista] = useState("grilla");
   const [borrador, setBorrador] = useState(FILTROS_VACIOS); 
   const [aplicados, setAplicados] = useState(FILTROS_VACIOS); 
+  const [imagenes, setImagenes] = useState([]);
+  const [cargando, setCargando] = useState(true);
+
+  useEffect(() => {
+    const obtenerImagenes = async () => {
+      try {
+        const fotos = await obtenerFotosPerros(ANIMALES.length);
+        setImagenes(fotos);
+      } catch {
+        Swal.fire({
+          icon: "error",
+          title: "Error",
+          text: "No se pudieron cargar las fotos de los perros.",
+        });
+      } finally {
+        setCargando(false);
+      }
+    };
+    obtenerImagenes();
+  }, []);
  
   
   const conteos = {
@@ -59,9 +82,10 @@ export default function AnimalesPage() {
   );
  
   const animales = useMemo(() => {
-    const lista = ANIMALES.filter((a) => coincide(a, aplicados, busqueda));
+    const conFotos = ANIMALES.map((a, i) => ({ ...a, foto: imagenes[i] ?? a.foto }));
+    const lista = conFotos.filter((a) => coincide(a, aplicados, busqueda));
     return lista.sort((a, b) => (orden === "nombre" ? a.nombre.localeCompare(b.nombre) : a.km - b.km));
-  }, [aplicados, busqueda, orden]);
+  }, [aplicados, busqueda, orden, imagenes]);
  
   return (
     <div className="flex h-dvh bg-white font-sans">
@@ -87,7 +111,11 @@ export default function AnimalesPage() {
         <HeroBanner />
         <ActiveFilters chips={chips} onRemove={quitarChip} onLimpiar={limpiar} />
         <ResultsToolbar total={animales.length} orden={orden} onOrden={setOrden} vista={vista} onVista={setVista} />
-        <AnimalGrid animales={animales} vista={vista} />
+        {cargando ? (
+          <p className="py-16 text-center text-cafe">Cargando perros...</p>
+        ) : (
+          <AnimalGrid animales={animales} vista={vista} />
+        )}
       </main>
     </div>
   );

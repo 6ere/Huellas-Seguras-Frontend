@@ -14,7 +14,7 @@ export default function AnimalCard({ animal, onVerMas, onFavorito }) {
 
   return (
     <article className="flex flex-col overflow-hidden rounded-xl border border-borde bg-white">
-      <div className="relative aspect-[4/3] bg-arena">
+      <div className="relative aspect-4/3 bg-arena">
         {animal.foto ? (
           <img
             src={animal.foto}
@@ -24,7 +24,7 @@ export default function AnimalCard({ animal, onVerMas, onFavorito }) {
             className="size-full object-cover"
           />
         ) : null}
-        <PawPrint size={48} className="absolute inset-0 m-auto -z-0 text-cafe/20" aria-hidden="true" />
+        <PawPrint size={48} className="absolute inset-0 m-auto z-0 text-cafe/20" aria-hidden="true" />
         <span className={`absolute left-2 top-2 rounded-full px-3 py-1 text-xs font-bold text-white ${reciente ? "bg-naranja" : "bg-oliva"}`}>
           {reciente ? "Recién publicado" : "En adopción"}
         </span>

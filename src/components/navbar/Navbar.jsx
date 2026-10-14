@@ -78,12 +78,12 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <a
-          href="/login"
+        <Link
+          to="/login"
           className="hidden rounded-full bg-[#D9825B] px-5 py-2 text-sm font-semibold text-white transition-colors hover:bg-amber-700 md:inline-block"
         >
           Reportar un caso
-        </a>
+        </Link>
       </div>
     </nav>
   );
