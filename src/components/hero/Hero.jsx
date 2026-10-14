@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 export default function Hero() {
   return (
     <>
@@ -27,18 +27,18 @@ export default function Hero() {
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             {/* El formulario */}
-            <a
-              href="/login"
+            <Link
+              to="/login"
               className="rounded-full bg-[#D9825B] px-7 py-3 text-lg font-semibold text-white transition-colors hover:bg-[#A85F3D]"
             >
               Reportar un caso
-            </a>
-            <a
-              href="/login"
+            </Link>
+            <Link
+              to="/login"
               className="rounded-full bg-[#F2C078] px-7 py-3 text-lg font-medium text-[#44352D] transition-colors hover:bg-[#DFA95F]"
             >
               Ver perros en adopción
-            </a>
+            </Link>
           </div>
         </div>
       </section>

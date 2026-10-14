@@ -7,6 +7,4 @@ export const ANIMALES = [
   { id: 6, nombre: "Lucas", especie: "Perros", sexo: "Macho", edadTexto: "6 años", edad: "adulto", tamano: "mediano", tamanoTexto: "Mediano", zona: "San Miguel de Tucumán", km: 10, raza: "Mestizo", color: "negro", estado: "adopcion", foto: "/animales/lucas.jpg", etiquetas: ["Castrado", "Vacunado", "Tranquilo"], caracteristicas: ["castrado", "vacunado"] },
 ];
 
-export const ANIMALES_PERDIDOS=[{
-
-}]
+export const ANIMALES_PERDIDOS=[]

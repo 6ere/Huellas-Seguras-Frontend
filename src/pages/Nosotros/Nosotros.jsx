@@ -11,7 +11,6 @@ function Huella({ className = "", style }) {
   );
 }
 
-// Iconos de contacto
 function Icono({ children, className = "h-7 w-7" }) {
   return (
     <svg
@@ -28,7 +27,6 @@ function Icono({ children, className = "h-7 w-7" }) {
   );
 }
 
-// Animación de entrada al scrollear
 function Aparecer({ children, className = "", delay = "delay-0" }) {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
@@ -59,7 +57,6 @@ function Aparecer({ children, className = "", delay = "delay-0" }) {
   );
 }
 
-// Componente para Preguntas Frecuentes
 function Pregunta({ pregunta, respuesta }) {
   return (
     <details className="group rounded-3xl border border-white/60 bg-white/40 p-5 shadow-sm backdrop-blur-md transition-all duration-300 hover:bg-white/80 hover:shadow-md open:bg-white/90 open:shadow-lg md:p-6">
@@ -79,13 +76,12 @@ function Pregunta({ pregunta, respuesta }) {
 }
 
 export default function Nosotros() {
-  // Estilos 
+
   const tituloBase = "font-serif text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl";
   const textoBase = "mt-5 text-base leading-relaxed sm:text-lg md:text-xl";
   const titulo = `${tituloBase} text-[#44352D]`;
   const texto = `${textoBase} text-[#6b5c4f]`;
 
-  // Caja para "Somos Huellas Seguras" y "Nuestra misión"
   const caja =
     "relative mx-auto max-w-6xl rounded-[2rem] bg-[#A85F3D] p-6 shadow-[0_20px_50px_rgba(143,78,49,0.3)] sm:p-10 md:rounded-[3rem] md:p-16";
 
@@ -94,11 +90,9 @@ export default function Nosotros() {
 
   return (
     <main className="relative min-h-screen overflow-hidden bg-[#FBF3EA]">
-      {/* Fondo decorativo general */}
       <div className="pointer-events-none absolute left-[20%] top-[20%] h-125 w-125 rounded-full bg-[#e6d9cd] opacity-50 blur-[120px]" />
       <div className="pointer-events-none absolute right-[10%] top-[60%] h-150 w-150 rounded-full bg-[#f3e1ce] opacity-50 blur-[150px]" />
 
-      {/* Cabecera */}
       <section className="relative overflow-hidden px-6 pb-12 pt-28 text-center md:pb-16 md:pt-32">
         <div className="relative z-10 mx-auto max-w-4xl">
           <span className="mb-4 inline-block rounded-full border border-[#44352D]/15 bg-[#44352D]/10 px-4 py-1.5 text-xs font-medium tracking-wider text-[#44352D] sm:text-sm">
@@ -113,7 +107,6 @@ export default function Nosotros() {
         </div>
       </section>
 
-      {/* Somos Huellas Seguras */}
       <section className="relative z-10 px-4 py-12 md:py-20">
         <Aparecer>
           <div className={caja}>
@@ -128,20 +121,18 @@ export default function Nosotros() {
                 </p>
               </div>
 
-              {/* Imagen con diseño */}
               <div className="group relative w-full md:w-1/2">
-                <div className="absolute inset-0 -rotate-6 scale-105 rounded-[2rem] bg-linear-to-br from-[#8F4E31] to-[#D9825B] shadow-lg transition-transform duration-700 ease-out group-hover:-rotate-3 group-hover:scale-100 md:rounded-[3rem]" />
-                <div className="relative overflow-hidden rounded-[2rem] border-8 border-white/80 bg-white shadow-2xl backdrop-blur-sm md:rounded-[3rem]">
+                <div className="absolute inset-0 -rotate-6 scale-105 rounded-4xl bg-linear-to-br from-[#8F4E31] to-[#D9825B] shadow-lg transition-transform duration-700 ease-out group-hover:-rotate-3 group-hover:scale-100 md:rounded-[3rem]" />
+                <div className="relative overflow-hidden rounded-4xl border-8 border-white/80 bg-white shadow-2xl backdrop-blur-sm md:rounded-[3rem]">
                   <img
                     src="/Nosotros.jpeg"
                     alt="Equipo de Huellas Seguras"
                     className="h-64 w-full object-cover transition-transform duration-700 group-hover:scale-110 sm:h-72 md:h-96"
                   />
-                  {/* Overlay */}
+
                   <div className="absolute inset-0 bg-linear-to-t from-[#44352D]/40 to-transparent" />
                 </div>
 
-                {/* Insignia flotante */}
                 <div className="absolute -bottom-4 -left-3 flex h-16 w-16 items-center justify-center rounded-full bg-[#F2C078] text-[#44352D] shadow-2xl ring-4 ring-[#A85F3D] transition-transform duration-500 hover:rotate-12 hover:scale-110 md:-bottom-6 md:-left-6 md:h-20 md:w-20">
                   <Huella className="h-8 w-8 md:h-10 md:w-10" />
                 </div>
@@ -151,14 +142,13 @@ export default function Nosotros() {
         </Aparecer>
       </section>
 
-      {/* Misión */}
       <section className="px-4 py-6 md:py-12">
         <Aparecer>
           <div className={caja}>
             <div className="flex flex-col-reverse items-center gap-10 md:flex-row md:gap-12">
               <div className="group relative w-full md:w-5/12">
-                <div className="absolute inset-0 rotate-6 scale-105 rounded-[2rem] bg-linear-to-br from-[#8F4E31] to-[#D9825B] shadow-lg transition-transform duration-700 ease-out group-hover:rotate-3 group-hover:scale-100 md:rounded-[3rem]" />
-                <div className="relative flex h-52 flex-col items-center justify-center rounded-[2rem] border-8 border-white/80 bg-[#FBF3EA] p-6 text-center shadow-2xl md:h-72 md:rounded-[3rem]">
+                <div className="absolute inset-0 rotate-6 scale-105 rounded-4xl bg-linear-to-br from-[#8F4E31] to-[#D9825B] shadow-lg transition-transform duration-700 ease-out group-hover:rotate-3 group-hover:scale-100 md:rounded-[3rem]" />
+                <div className="relative flex h-52 flex-col items-center justify-center rounded-4xl border-8 border-white/80 bg-[#FBF3EA] p-6 text-center shadow-2xl md:h-72 md:rounded-[3rem]">
                   <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#F2C078] text-[#44352D] transition-transform duration-500 group-hover:rotate-12">
                     <Huella className="h-8 w-8" />
                   </div>
@@ -184,7 +174,6 @@ export default function Nosotros() {
         </Aparecer>
       </section>
 
-      {/* Preguntas frecuentes */}
       <section className="relative z-10 mx-auto max-w-4xl px-4 py-16 sm:px-6 md:py-32">
         <Aparecer>
           <div className="mb-10 text-center md:mb-12">
@@ -212,7 +201,6 @@ export default function Nosotros() {
         </Aparecer>
       </section>
 
-      {/* Contacto */}
       <section className="relative mt-10 border-t border-[#44352D]/10 px-6 py-16 text-center md:py-20">
         <Aparecer delay="delay-100">
           <Huella className="mx-auto mb-6 h-12 w-12 text-[#44352D] opacity-100" />
@@ -253,3 +241,4 @@ export default function Nosotros() {
     </main>
   );
 }
+
