@@ -1,5 +1,7 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState,useEffect } from "react";
 import Swal from "sweetalert2";
+import {obtenerFotosPerros} from "../../services/dogService"
+
 import Sidebar from "../../components/navbar/Sidebar"
 import FilterPanel from "../../components/navbar/FilterPanel"
 import TopBar from "../../components/navbar/TopBar"
