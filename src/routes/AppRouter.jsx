@@ -1,18 +1,34 @@
-import { Routes,BrowserRouter,Route } from "react-router-dom";
+import { Routes, BrowserRouter, Route } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout/MainLayout";
 import Home from "../pages/Home/Home";
 import Veterinaria from "../pages/Veterinaria/Veterinaria";
 import NotFound from "../pages/Errors/404-NotFound/NotFound";
-
-export function AppRouter(){
-    return(
+import Login from "../pages/Login/Login.jsx";
+import Nosotros from "../pages/Nosotros/Nosotros";
+import UserPage from "../pages/UserPage/UserPage"
+import Sidebar from "../components/navbar/Sidebar.jsx";
+ 
+export function AppRouter() {
+    return (
         <BrowserRouter>
-        <Routes>
-        <Route element={<MainLayout/>}>
-        <Route path="/" element={<Home/>}/>
-        </Route>
-        <Route path="*" element={<NotFound/>}/>
-        </Routes>
+            <Routes>
+                <Route element={<MainLayout />}>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/veterinarias" element={<Veterinaria />} />
+                    <Route path="/nosotros" element={<Nosotros />} />
+                </Route>
+ 
+                <Route path="/login" element={<Login />} />
+                <Route path="/login/user" element={<UserPage/>}>
+                    <Route path="/login/user/" element={<Sidebar/>}/>
+                </Route>
+                
+                
+                
+ 
+                <Route path="*" element={<NotFound />} />
+            </Routes>
         </BrowserRouter>
-    )
+    );
 }
+ 

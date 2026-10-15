@@ -1,1 +1,11 @@
-    @import "tailwindcss";
+@import 'tailwindcss';
+@theme {
+  --font-sans: "Nunito", ui-sans-serif, system-ui, sans-serif;
+  --color-crema: #fbf6f1;
+  --color-arena: #f3e7dc;
+  --color-borde: #eadbcc;
+  --color-cafe: #7b4a2d;
+  --color-cafe-oscuro: #5a3420;
+  --color-oliva: #4f8f3a;
+  --color-naranja: #e08a2e;
+}

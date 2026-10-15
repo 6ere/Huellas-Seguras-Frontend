@@ -33,7 +33,7 @@ export default function NotFound() {
         {rastro.map((p, i) => (
           <Paw
             key={i}
-            className="paw-step absolute h-[22px] w-[22px] fill-[#DFA95F]"
+            className="paw-step absolute h-5.5 w-5.5 fill-[#DFA95F]"
             style={{ left: p.left, top: p.top, animationDelay: `${i * 0.5}s` }}
           />
         ))}

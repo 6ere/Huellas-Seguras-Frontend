@@ -1,10 +1,10 @@
 import Hero from "../../components/hero/Hero";
-import Cards from "../../components/cards/Cards";
+import HomeCards from "../../components/cards/HomeCards";
 export default function Home() {
   return (
     <>
       <Hero/>
-      <Cards/>
+      <HomeCards/>
     </>
   );
 }
